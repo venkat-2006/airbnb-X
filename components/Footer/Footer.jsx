@@ -4,7 +4,8 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div>
-        3
+        
+       
       
     </div>
   )
