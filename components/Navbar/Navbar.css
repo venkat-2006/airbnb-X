@@ -1,21 +1,53 @@
-.top-nav{
-    display: flex;
+.top-nav {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between; 
+  padding: 0 20px;
 }
+
+.top-nav .logo img {
+  height: 60px;
+  cursor: pointer;
+}
+
+/* middle nav items */
 .top-nav span {
-    display: flex;
-    align-items: center;       /* vertical center */
-    justify-content: center;   /* horizontal center */
-    padding: 0px 400px;
-    
+  display: flex;
+  gap: 40px;             
+  font-weight: 500;
+  cursor: pointer;
 }
-.top-nav span div{
-    padding:8px 30px;
-    cursor: pointer;
+
+.top-nav span div {
+  padding: 8px 0;
 }
-.top-nav .logo img{
-    height: 60px;
-    padding-left: 10px;
-    margin-right: auto;
-    cursor: pointer;
-    
+
+
+.top-nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.top-nav .nav-right .sandwich {
+  height: 25px;
+  border-radius:20%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.top-nav .nav-right .sandwich:hover {
+  transform: scale(1.2); /* zoom in a bit */
+  background-color: #f0f0f0; /* light background on hover */
+}
+
+.top-nav .nav-right .internet {
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.top-nav .nav-right .internet:hover {
+  transform: scale(1.1); /* zoom in slightly */
+  background-color: #e6e6e6; /* subtle background on hover */
 }
