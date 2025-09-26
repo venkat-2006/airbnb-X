@@ -7,13 +7,16 @@ import MainPage from '../components/MainPage/MainPage'
 import Footer from '../components/Footer/Footer'
 
 function App() {
- 
+
 
   return (
     <>
-      <Navbar/>
-      <MainPage/>
-      <Footer/>
+      <Navbar />
+      <div className="page-content">
+        <MainPage />
+        <Footer />
+      </div>
+
     </>
   )
 }

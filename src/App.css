@@ -1,0 +1,8 @@
+.page-content {
+  padding-top: 160px; /* adjust depending on navbar + search bar height */
+}
+body::after {
+  content: "";
+  display: block;
+  height: 2000px; /* fake content to allow scrolling */
+}

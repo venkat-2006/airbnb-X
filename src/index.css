@@ -1,7 +1,15 @@
+/* Global reset */
 * {
   margin: 0;
-  padding: 0; /* reset padding for consistency */
-  box-sizing: border-box; /* makes layout easier to control */
-  font-family: 'Poppins', sans-serif; /* clean modern font from Google Fonts */
-  background-color: white; /* applies white background globally */
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Only apply background to the page, not every element */
+html, body {
+  background-color: white;
+  height: 100%;
+  overflow-x: hidden;  /* disable horizontal scroll */
+  overflow-y: auto;    /* allow vertical scroll */
 }
