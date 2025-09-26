@@ -16,6 +16,7 @@
   gap: 40px;             
   font-weight: 500;
   cursor: pointer;
+  padding-left: 160px;
 }
 
 .top-nav span div {
@@ -51,3 +52,94 @@
   transform: scale(1.1); /* zoom in slightly */
   background-color: #e6e6e6; /* subtle background on hover */
 }
+.nav-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+ 
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px; /* perfect pill shape */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px 20px;
+  width: 800px;
+  cursor: pointer;
+  height:65px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  justify-content: space-between; /* This pushes emoji to right corner */
+  
+}
+
+.search-bar:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.search-items-container {
+  display: flex;
+  flex: 1; /* fills remaining space */
+  justify-content: space-evenly; /* distributes items evenly */
+  align-items: center;
+  margin-right: 15px; /* adds some space before the emoji */
+}
+
+.search-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.search-item h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600; /* semi-bold for headings */
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.search-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.divider {
+  width: 1px;
+  height: 35px;
+  background-color: #ddd;
+}
+
+.search-button {
+  background-color: white;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0; /* prevents the button from shrinking */
+}
+
+.search-button:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.05);
+}
+
+.search-button img {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+
+
+
+
+
+
