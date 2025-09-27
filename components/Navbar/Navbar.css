@@ -1,7 +1,6 @@
-
 .total {
-  background-color: #f8f9fa; /* whitish grey background */
-  max-height: 300px; /* full viewport height if needed */
+  background-color: #f8f9fa;
+  min-height: 100vh;
 }
 
 .top-nav { 
@@ -10,19 +9,18 @@
   left: 0; 
   right: 0; 
   height: 80px; 
-  background-color: white; 
+  background-color: rgb(190, 202, 201); 
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
   display: flex; 
   align-items: center; 
   justify-content: space-between; 
   padding: 15px 20px; 
   z-index: 1000; 
-  transition: transform 0.3s ease; /* smooth transition for hiding */
+  transition: transform 0.3s ease;
 } 
 
-/* Hide top-nav when scrolled */
 .top-nav.hide {
-  transform: translateY(-100%); /* move it up and out of view */
+  transform: translateY(-100%);
 }
  
 .top-nav .logo img { 
@@ -30,12 +28,10 @@
   cursor: pointer; 
 } 
  
-/* middle nav items */ 
 .top-nav span { 
   display: flex; 
   gap: 40px;              
   font-weight: 500; 
-  
   padding-left: 160px; 
 } 
  
@@ -43,7 +39,6 @@
   padding: 8px 0; 
   cursor: pointer;
 } 
- 
  
 .top-nav .nav-right { 
   display: flex; 
@@ -59,8 +54,8 @@
 } 
  
 .top-nav .nav-right .sandwich:hover { 
-  transform: scale(1.2); /* zoom in a bit */ 
-  background-color: #f0f0f0; /* light background on hover */ 
+  transform: scale(1.2);
+  background-color: #f0f0f0;
 } 
  
 .top-nav .nav-right .internet { 
@@ -70,83 +65,84 @@
 } 
  
 .top-nav .nav-right .internet:hover { 
-  transform: scale(1.1); /* zoom in slightly */ 
-  background-color: #e6e6e6; /* subtle background on hover */ 
+  transform: scale(1.1);
+  background-color: #e6e6e6;
 } 
 
 .nav-bottom { 
-  display: flex; /* show by default */ 
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  display: flex;
   justify-content: center; 
   width: 100%;
-  margin-top: 95px; /* space below top-nav initially (80px height + 15px gap) */
+  margin-top: 0;
   transition: all 0.3s ease;
-  z-index: 999; /* lower than top-nav initially */
-  
+  z-index: 999;
+  background-color: transparent;
 } 
  
-/* When nav-bottom becomes sticky after scroll */
 .nav-bottom.sticky { 
   position: fixed; 
-  top: 0; /* stick to very top of screen */ 
-  left: 0; 
-  right: 0; 
-  background-color: white; 
+  top: 0;
+  background-color: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-  z-index: 1100; /* higher than top-nav to stay above */
+  z-index: 1100;
   padding: 10px 0;
-  margin-top: 0; /* remove margin when sticky */
 }
  
 .search-bar { 
   display: flex; 
   align-items: center; 
-  background-color: #f7f7f7; /* lighter background instead of white */
-  border: 1px solid #e0e0e0; /* subtle border instead of shadow */
-  border-radius: 50px; /* perfect pill shape */ 
-  padding: 12px 25px; /* increased padding for better spacing */
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  padding: 12px 25px;
   width: 800px; 
   cursor: pointer; 
   height: 65px; 
   transition: all 0.3s ease; 
+  margin-top: 15px;
 } 
  
 .search-bar:hover { 
   background-color: white;
   border-color: #ccc;
-  transform: none; /* remove the lift effect */
+  transform: none;
 } 
  
 .search-items-container { 
   display: flex; 
-  flex: 1; /* fills remaining space */ 
+  flex: 1;
   align-items: center; 
-  justify-content: space-around; /* equally space the search items */
-  margin-right: 20px; /* adds space before the search button */ 
+  justify-content: space-around;
+  margin-right: 20px;
+  
 } 
  
 .search-item { 
   display: flex; 
   flex-direction: column; 
   cursor: pointer; 
-  padding: 8px 15px; /* adjusted padding */
-  border-radius: 25px; /* rounded corners for hover effect */
+  padding: 8px 15px;
+  border-radius: 25px;
   transition: background-color 0.2s ease;
-  text-align: left; /* align text to left */
-  min-width: 120px; /* minimum width for consistent sizing */
-
+  text-align: left;
+  min-width: 120px;
+  
 } 
 
 .search-item:hover {
-  background-color: #f0f0f0; /* subtle hover background */
+  background-color: #f0f0f0;
 } 
  
 .search-item h2 { 
   margin: 0; 
   font-size: 15px; 
-  font-weight: 600; /* semi-bold for headings */ 
+  font-weight: 600;
   font-family: 'Poppins', sans-serif; 
 } 
- 
  
 .search-item p { 
   margin: 0; 
@@ -159,11 +155,10 @@
   width: 1px; 
   height: 35px; 
   background-color: #e0e0e0; 
-  margin: 0 5px; /* small margin around dividers */
+  margin: 0 5px;
 } 
  
 .search-button { 
-   /* Airbnb red color */
   height: 48px; 
   width: 48px; 
   border-radius: 50%; 
@@ -172,11 +167,10 @@
   align-items: center; 
   cursor: pointer; 
   transition: all 0.3s ease; 
-  flex-shrink: 0; /* prevents the button from shrinking */ 
+  flex-shrink: 0;
 } 
  
 .search-button:hover { 
- /* darker red on hover */
   transform: scale(1.05); 
 } 
  
@@ -187,29 +181,27 @@
 } 
 
 .page-content { 
-  margin-top: 160px; /* 80px top-nav + ~80px search bar initially */ 
+  margin-top: 120px;
   transition: margin-top 0.3s ease;
+  padding: 20px;
 }
 
-/* When nav-bottom becomes sticky, adjust content margin */
 .page-content.sticky-margin { 
-  margin-top: 100px; /* only nav-bottom height when sticky */ 
+  margin-top: 85px;
 }
 
-.x1{
+.x1 {
   height: 50px
 }
 
-
- .x2, .x3 {
+.x2, .x3 {
   height: 35px;
   width: auto;
 }
+
 .homes, .experiences, .services {
   display: flex;
-  align-items: center;   /* vertical center */
-  gap: 8px;              /* space between image and text */
-  font-size: 16px;       /* adjust text size if needed */
-}
-
-
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+} 

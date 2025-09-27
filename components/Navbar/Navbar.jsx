@@ -10,6 +10,7 @@ import food2 from '../../src/assets/food2.jpeg';
 import home from '../../src/assets/home.jpeg';
 
 
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -72,18 +73,16 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
+  <div>
+    Welcome to AirBnB!!!
+  </div>
       {/* Content section */}
       <div className={`page-content ${isScrolled ? 'sticky-margin' : ''}`}>
-        <p>Lots of scrollable content goes here...</p>
+        Lots of scrollable content goes here...
         {/* Add more content to test scrolling */}
-        <div style={{ height: '2000px', padding: '20px' }}>
-          <h2>Scroll down to see the navigation behavior!</h2>
-          <p>Keep scrolling to test the sticky navigation...</p>
-          <p>The top navigation will disappear after 150px of scrolling, and the bottom search bar will stick to the top!</p>
-          <p>No content will be hidden behind the navigation.</p>
-        </div>
+
       </div>
+      
     </div>
   );
 };

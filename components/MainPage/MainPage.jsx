@@ -4,7 +4,7 @@ import './MainPage.css'
 const MainPage = () => {
   return (
     <div>
-      123
+      
       
     </div>
   )
