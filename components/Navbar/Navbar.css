@@ -1,3 +1,9 @@
+
+.total {
+  background-color: #f8f9fa; /* whitish grey background */
+  max-height: 300px; /* full viewport height if needed */
+}
+
 .top-nav { 
   position: fixed; 
   top: 0; 
@@ -75,6 +81,7 @@
   margin-top: 95px; /* space below top-nav initially (80px height + 15px gap) */
   transition: all 0.3s ease;
   z-index: 999; /* lower than top-nav initially */
+  
 } 
  
 /* When nav-bottom becomes sticky after scroll */
@@ -126,6 +133,7 @@
   transition: background-color 0.2s ease;
   text-align: left; /* align text to left */
   min-width: 120px; /* minimum width for consistent sizing */
+
 } 
 
 .search-item:hover {
@@ -203,3 +211,5 @@
   gap: 8px;              /* space between image and text */
   font-size: 16px;       /* adjust text size if needed */
 }
+
+

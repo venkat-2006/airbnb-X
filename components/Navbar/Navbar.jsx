@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
+    <div className='total'>
       {/* Top Navigation */}
       <div className={`top-nav ${isScrolled ? 'hide' : ''}`}>
         <div className="logo">
@@ -84,7 +84,7 @@ const Navbar = () => {
           <p>No content will be hidden behind the navigation.</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

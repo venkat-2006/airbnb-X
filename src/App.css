@@ -1,5 +1,6 @@
 .page-content {
-  padding-top: 160px; /* adjust depending on navbar + search bar height */
+  padding-top: 160px;
+   /* adjust depending on navbar + search bar height */
 }
 body::after {
   content: "";
