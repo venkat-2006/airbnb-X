@@ -190,13 +190,17 @@
   margin-top: 85px;
 }
 
-.x1 {
-  height: 50px
+.x1  {
+  height: 50px;
+  border-radius: 50%;
+  width: auto;
+  
 }
 
 .x2, .x3 {
   height: 35px;
   width: auto;
+  border-radius: 50%;
 }
 
 .homes, .experiences, .services {
