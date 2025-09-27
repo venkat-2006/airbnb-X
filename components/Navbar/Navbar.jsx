@@ -4,6 +4,11 @@ import logo from '../../src/assets/logo.png';
 import internet_emoji_x from '../../src/assets/internet_emoji_x.jpg';
 import sandwich from '../../src/assets/sandwich.jpg';
 import search_emoji from '../../src/assets/search_emoji.jpg';
+import experiences from '../../src/assets/experiences.jpeg';
+import food1 from '../../src/assets/food1.jpeg';
+import food2 from '../../src/assets/food2.jpeg';
+import home from '../../src/assets/home.jpeg';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,9 +36,9 @@ const Navbar = () => {
         </div>
 
         <span>
-          <div className="homes">Homes</div>
-          <div className="experiences">Experiences</div>
-          <div className="services">Services</div>
+          <div className="homes"><img src={home} alt=""  className='x1'/>Homes</div>
+          <div className="experiences"><img src={experiences} alt=""className='x2' />Experiences </div>
+          <div className="services"><img src={food1} alt=""  className='x3'/>Services</div>
         </span>
 
         <div className="nav-right">

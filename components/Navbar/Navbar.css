@@ -29,12 +29,13 @@
   display: flex; 
   gap: 40px;              
   font-weight: 500; 
-  cursor: pointer; 
+  
   padding-left: 160px; 
 } 
  
 .top-nav span div { 
   padding: 8px 0; 
+  cursor: pointer;
 } 
  
  
@@ -185,4 +186,20 @@
 /* When nav-bottom becomes sticky, adjust content margin */
 .page-content.sticky-margin { 
   margin-top: 100px; /* only nav-bottom height when sticky */ 
+}
+
+.x1{
+  height: 50px
+}
+
+
+ .x2, .x3 {
+  height: 35px;
+  width: auto;
+}
+.homes, .experiences, .services {
+  display: flex;
+  align-items: center;   /* vertical center */
+  gap: 8px;              /* space between image and text */
+  font-size: 16px;       /* adjust text size if needed */
 }
