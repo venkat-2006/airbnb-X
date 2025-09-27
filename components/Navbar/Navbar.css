@@ -1,145 +1,179 @@
-.top-nav {
-  display: flex;
-  align-items: center;  
+.top-nav { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  height: 80px; 
+  background-color: white; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  display: flex; 
+  align-items: center; 
   justify-content: space-between; 
-  padding: 15px 20px;
-}
+  padding: 15px 20px; 
+  z-index: 1000; 
+  transition: transform 0.3s ease; /* smooth transition for hiding */
+} 
 
-.top-nav .logo img {
-  height: 60px;
-  cursor: pointer;
+/* Hide top-nav when scrolled */
+.top-nav.hide {
+  transform: translateY(-100%); /* move it up and out of view */
 }
-
-/* middle nav items */
-.top-nav span {
-  display: flex;
-  gap: 40px;             
-  font-weight: 500;
-  cursor: pointer;
-  padding-left: 160px;
-}
-
-.top-nav span div {
-  padding: 8px 0;
-}
-
-
-.top-nav .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  cursor: pointer;
-}
-
-.top-nav .nav-right .sandwich {
-  height: 25px;
-  border-radius:20%;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.top-nav .nav-right .sandwich:hover {
-  transform: scale(1.2); /* zoom in a bit */
-  background-color: #f0f0f0; /* light background on hover */
-}
-
-.top-nav .nav-right .internet {
-  height: 50px;
-  border-radius: 50%;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.top-nav .nav-right .internet:hover {
-  transform: scale(1.1); /* zoom in slightly */
-  background-color: #e6e6e6; /* subtle background on hover */
-}
-.nav-bottom {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
  
+.top-nav .logo img { 
+  height: 60px; 
+  cursor: pointer; 
+} 
+ 
+/* middle nav items */ 
+.top-nav span { 
+  display: flex; 
+  gap: 40px;              
+  font-weight: 500; 
+  cursor: pointer; 
+  padding-left: 160px; 
+} 
+ 
+.top-nav span div { 
+  padding: 8px 0; 
+} 
+ 
+ 
+.top-nav .nav-right { 
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  cursor: pointer; 
+} 
+ 
+.top-nav .nav-right .sandwich { 
+  height: 25px; 
+  border-radius: 20%; 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+} 
+ 
+.top-nav .nav-right .sandwich:hover { 
+  transform: scale(1.2); /* zoom in a bit */ 
+  background-color: #f0f0f0; /* light background on hover */ 
+} 
+ 
+.top-nav .nav-right .internet { 
+  height: 50px; 
+  border-radius: 50%; 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+} 
+ 
+.top-nav .nav-right .internet:hover { 
+  transform: scale(1.1); /* zoom in slightly */ 
+  background-color: #e6e6e6; /* subtle background on hover */ 
+} 
+
+.nav-bottom { 
+  display: flex; /* show by default */ 
+  justify-content: center; 
+  width: 100%;
+  margin-top: 95px; /* space below top-nav initially (80px height + 15px gap) */
+  transition: all 0.3s ease;
+  z-index: 999; /* lower than top-nav initially */
+} 
+ 
+/* When nav-bottom becomes sticky after scroll */
+.nav-bottom.sticky { 
+  position: fixed; 
+  top: 0; /* stick to very top of screen */ 
+  left: 0; 
+  right: 0; 
+  background-color: white; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+  z-index: 1100; /* higher than top-nav to stay above */
+  padding: 10px 0;
+  margin-top: 0; /* remove margin when sticky */
+}
+ 
+.search-bar { 
+  display: flex; 
+  align-items: center; 
+  background-color: white; 
+  border-radius: 50px; /* perfect pill shape */ 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  padding: 12px 20px; 
+  width: 800px; 
+  cursor: pointer; 
+  height: 65px; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  justify-content: space-between; /* This pushes emoji to right corner */ 
+} 
+ 
+.search-bar:hover { 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-2px); 
+} 
+ 
+.search-items-container { 
+  display: flex; 
+  flex: 1; /* fills remaining space */ 
+  justify-content: space-evenly; /* distributes items evenly */ 
+  align-items: center; 
+  margin-right: 15px; /* adds some space before the emoji */ 
+} 
+ 
+.search-item { 
+  display: flex; 
+  flex-direction: column; 
+  cursor: pointer; 
+  padding: 0 10px; 
+} 
+ 
+.search-item h2 { 
+  margin: 0; 
+  font-size: 15px; 
+  font-weight: 600; /* semi-bold for headings */ 
+  font-family: 'Poppins', sans-serif; 
+} 
+ 
+ 
+.search-item p { 
+  margin: 0; 
+  font-size: 13px; 
+  color: #555; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+} 
+
+.divider { 
+  width: 1px; 
+  height: 35px; 
+  background-color: #ddd; 
+} 
+ 
+.search-button { 
+  background-color: white; 
+  height: 48px; 
+  width: 48px; 
+  border-radius: 50%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  flex-shrink: 0; /* prevents the button from shrinking */ 
+} 
+ 
+.search-button:hover { 
+  background-color: #f2f2f2; 
+  transform: scale(1.05); 
+} 
+ 
+.search-button img { 
+  height: 60px; 
+  width: 60px; 
+  object-fit: contain; 
+} 
+
+.page-content { 
+  margin-top: 160px; /* 80px top-nav + ~80px search bar initially */ 
+  transition: margin-top 0.3s ease;
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-radius: 50px; /* perfect pill shape */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 12px 20px;
-  width: 800px;
-  cursor: pointer;
-  height:65px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  justify-content: space-between; /* This pushes emoji to right corner */
-  
+/* When nav-bottom becomes sticky, adjust content margin */
+.page-content.sticky-margin { 
+  margin-top: 100px; /* only nav-bottom height when sticky */ 
 }
-
-.search-bar:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
-
-.search-items-container {
-  display: flex;
-  flex: 1; /* fills remaining space */
-  justify-content: space-evenly; /* distributes items evenly */
-  align-items: center;
-  margin-right: 15px; /* adds some space before the emoji */
-}
-
-.search-item {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 0 10px;
-}
-
-.search-item h2 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 600; /* semi-bold for headings */
-  font-family: 'Poppins', sans-serif;
-}
-
-
-.search-item p {
-  margin: 0;
-  font-size: 13px;
-  color: #555;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.divider {
-  width: 1px;
-  height: 35px;
-  background-color: #ddd;
-}
-
-.search-button {
-  background-color: white;
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  flex-shrink: 0; /* prevents the button from shrinking */
-}
-
-.search-button:hover {
-  background-color: #f2f2f2;
-  transform: scale(1.05);
-}
-
-.search-button img {
-  height: 60px;
-  width: 60px;
-  object-fit: contain;
-}
-
-
-
-
-
-
