@@ -92,35 +92,43 @@
 .search-bar { 
   display: flex; 
   align-items: center; 
-  background-color: white; 
+  background-color: #f7f7f7; /* lighter background instead of white */
+  border: 1px solid #e0e0e0; /* subtle border instead of shadow */
   border-radius: 50px; /* perfect pill shape */ 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
-  padding: 12px 20px; 
+  padding: 12px 25px; /* increased padding for better spacing */
   width: 800px; 
   cursor: pointer; 
   height: 65px; 
-  transition: box-shadow 0.3s ease, transform 0.3s ease; 
-  justify-content: space-between; /* This pushes emoji to right corner */ 
+  transition: all 0.3s ease; 
 } 
  
 .search-bar:hover { 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
-  transform: translateY(-2px); 
+  background-color: white;
+  border-color: #ccc;
+  transform: none; /* remove the lift effect */
 } 
  
 .search-items-container { 
   display: flex; 
   flex: 1; /* fills remaining space */ 
-  justify-content: space-evenly; /* distributes items evenly */ 
   align-items: center; 
-  margin-right: 15px; /* adds some space before the emoji */ 
+  justify-content: space-around; /* equally space the search items */
+  margin-right: 20px; /* adds space before the search button */ 
 } 
  
 .search-item { 
   display: flex; 
   flex-direction: column; 
   cursor: pointer; 
-  padding: 0 10px; 
+  padding: 8px 15px; /* adjusted padding */
+  border-radius: 25px; /* rounded corners for hover effect */
+  transition: background-color 0.2s ease;
+  text-align: left; /* align text to left */
+  min-width: 120px; /* minimum width for consistent sizing */
+} 
+
+.search-item:hover {
+  background-color: #f0f0f0; /* subtle hover background */
 } 
  
 .search-item h2 { 
@@ -141,11 +149,12 @@
 .divider { 
   width: 1px; 
   height: 35px; 
-  background-color: #ddd; 
+  background-color: #e0e0e0; 
+  margin: 0 5px; /* small margin around dividers */
 } 
  
 .search-button { 
-  background-color: white; 
+   /* Airbnb red color */
   height: 48px; 
   width: 48px; 
   border-radius: 50%; 
@@ -153,12 +162,12 @@
   justify-content: center; 
   align-items: center; 
   cursor: pointer; 
-  transition: background-color 0.3s ease, transform 0.2s ease; 
+  transition: all 0.3s ease; 
   flex-shrink: 0; /* prevents the button from shrinking */ 
 } 
  
 .search-button:hover { 
-  background-color: #f2f2f2; 
+ /* darker red on hover */
   transform: scale(1.05); 
 } 
  
